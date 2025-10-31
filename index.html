@@ -156,6 +156,14 @@
       text-decoration: underline;
     }
 
+    /* ✅ Fix: keep links gold in dark mode */
+    body.dark a {
+      color: var(--accent) !important;
+    }
+    body.dark a:hover {
+      color: #d4aa4d !important;
+    }
+
     footer {
       margin-top: 25px;
       font-size: 0.9rem;
@@ -261,7 +269,7 @@
     toggleBtn.addEventListener('click', () => {
       body.classList.toggle('dark');
       if (body.classList.contains('dark')) {
-        toggleBtn.textContent = '☀ Light Mode';
+        toggleBtn.textContent = '☀️ Light Mode';
       } else {
         toggleBtn.textContent = '🌙 Dark Mode';
       }
